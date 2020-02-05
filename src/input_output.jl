@@ -93,7 +93,7 @@ function Trace(s::SAC.SACtr)
             key = Symbol(uppercase(String(time_field)))
             time = s[time_field]
             name = _sacmissing(s, name_field)
-            t.picks[key] = Pick{Float32}((time, name))
+            t.picks[key] = Pick{Float32,String}((time, name))
         end
     end
 
